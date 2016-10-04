@@ -112,5 +112,21 @@ namespace Test.DediLib.Net
         {
             Assert.Equal(new BigInteger(count), IPRange.Parse(network).BigCount);
         }
+
+        [Fact]
+        public void Equals_Equal_True()
+        {
+            var ipRange1 = IPRange.Parse("192.168.1.0/24");
+            var ipRange2 = IPRange.Parse("192.168.1.0/24");
+            Assert.True(ipRange1.Equals((object)ipRange2));
+        }
+
+        [Fact]
+        public void Equals_NotEqual_False()
+        {
+            var ipRange1 = IPRange.Parse("192.168.1.0/23");
+            var ipRange2 = IPRange.Parse("192.168.1.0/24");
+            Assert.False(ipRange1.Equals((object)ipRange2));
+        }
     }
 }

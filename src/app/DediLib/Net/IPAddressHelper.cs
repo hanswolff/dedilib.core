@@ -39,7 +39,7 @@ namespace DediLib.Net
             var broadcastAddress = new byte[addressBytes.Length];
             for (var i = 0; i < broadcastAddress.Length; i++)
             {
-                broadcastAddress[i] = (byte)(addressBytes[i] & (subnetMaskBytes[i]));
+                broadcastAddress[i] = (byte)(addressBytes[i] & subnetMaskBytes[i]);
             }
             return new IPAddress(broadcastAddress);
         }
