@@ -15,21 +15,21 @@
     <tags></tags>
     <dependencies>
       <group targetFramework=".NETStandard1.6">
-        <dependency id="System.Console" version="4.0.0" />
-        <dependency id="System.Collections.Concurrent" version="4.0.12" />
-        <dependency id="System.Globalization" version="4.0.11" />
-        <dependency id="System.IO" version="4.1.0" />
-        <dependency id="System.IO.FileSystem" version="4.0.1" />
-        <dependency id="System.Linq" version="4.1.0" />
-        <dependency id="System.Net.Primitives" version="4.0.11" />
-        <dependency id="System.Reflection" version="4.1.0" />
-        <dependency id="System.Threading.Tasks" version="4.0.11" />
+        <dependency id="System.Console" version="4.3.0" />
+        <dependency id="System.Collections.Concurrent" version="4.3.0" />
+        <dependency id="System.Globalization" version="4.3.0" />
+        <dependency id="System.IO" version="4.3.0" />
+        <dependency id="System.IO.FileSystem" version="4.3.0" />
+        <dependency id="System.Linq" version="4.3.0" />
+        <dependency id="System.Net.Primitives" version="4.3.0" />
+        <dependency id="System.Reflection" version="4.3.0" />
+        <dependency id="System.Threading.Tasks" version="4.3.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="app\DediLib\bin\Debug\netstandard1.6\*.deps.json" target="lib/netstandard1.6" />
-    <file src="app\DediLib\bin\Debug\netstandard1.6\*.dll" target="lib/netstandard1.6" />
-    <file src="app\DediLib\bin\Debug\netstandard1.6\*.pdb" target="lib/netstandard1.6" />
+    <file src="app\DediLib\bin\Release\netstandard1.6\*.deps.json" target="lib/netstandard1.6" />
+    <file src="app\DediLib\bin\Release\netstandard1.6\*.dll" target="lib/netstandard1.6" />
+    <file src="app\DediLib\bin\Release\netstandard1.6\*.pdb" target="lib/netstandard1.6" />
   </files>  
 </package>
