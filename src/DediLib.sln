@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4BC7144F-3292-4BFD-9370-9A57B7932583}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D48B823-7C87-4D32-BADB-1658A7F9E24F}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DediLib", "app\DediLib\DediLib.xproj", "{2F71CCF4-F353-4938-8387-2A831106C26A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DediLib", "app\DediLib\DediLib.csproj", "{2F71CCF4-F353-4938-8387-2A831106C26A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Test.DediLib", "test\Test.DediLib\Test.DediLib.xproj", "{1C32A6CC-C546-483C-AAB0-4C4398328263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.DediLib", "test\Test.DediLib\Test.DediLib.csproj", "{1C32A6CC-C546-483C-AAB0-4C4398328263}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

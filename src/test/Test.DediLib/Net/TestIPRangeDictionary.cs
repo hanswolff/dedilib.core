@@ -223,6 +223,7 @@ namespace Test.DediLib.Net
             Assert.Equal(expected, value);
         }
 
+        [Trait("Category", "Benchmark")]
         [Fact]
         public void PerformanceTestIpv4()
         {
@@ -240,6 +241,7 @@ namespace Test.DediLib.Net
             Console.WriteLine("Elapsed in " + stopwatch.ElapsedMilliseconds + "ms, " + count * 1000 / stopwatch.ElapsedMilliseconds);
         }
 
+        [Trait("Category", "Benchmark")]
         [Fact]
         public void PerformanceTestIpv6()
         {
