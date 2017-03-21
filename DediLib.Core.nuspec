@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>DediLib.Core</id>
+    <id>DediLib2.Core</id>
     <version>$version$</version>
     <authors>Hans Wolff</authors>
     <owners>Hans Wolff</owners>
@@ -28,8 +28,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="app\DediLib\bin\Release\netstandard1.6\*.deps.json" target="lib/netstandard1.6" />
-    <file src="app\DediLib\bin\Release\netstandard1.6\*.dll" target="lib/netstandard1.6" />
-    <file src="app\DediLib\bin\Release\netstandard1.6\*.pdb" target="lib/netstandard1.6" />
+    <file src="build\*.deps.json" target="lib/netstandard1.6" />
+    <file src="build\*.dll" target="lib/netstandard1.6" />
+    <file src="build\*.pdb" target="lib/netstandard1.6" />
   </files>  
 </package>
