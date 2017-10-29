@@ -135,6 +135,7 @@ namespace Test.DediLib.Collections
         }
 
         [Trait("Category", "Benchmark")]
+        [Theory]
         [InlineData(1000000, 10, Skip = "benchmark")]
         [InlineData(100000, 100, Skip = "benchmark")]
         [InlineData(10000, 1000, Skip = "benchmark")]

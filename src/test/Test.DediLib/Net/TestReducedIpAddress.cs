@@ -17,6 +17,7 @@ namespace Test.DediLib.Net
             Assert.Equal(0UL, reducedIp.ReducedIpValue);
         }
 
+        [Theory]
         [InlineData("127.0.0.1")]
         [InlineData("127.1.0.1")]
         [InlineData("::1")]
@@ -39,6 +40,7 @@ namespace Test.DediLib.Net
             Assert.Equal(reducedIpv4.ReducedIpValue, reducedIpv6.ReducedIpValue);
         }
 
+        [Theory]
         [InlineData("2a02:8108:4740:780c:594f:4602:31ba:8e2e")]
         [InlineData("2a02:8108:4740:780c:594f:4602:31ba:9999")]
         [InlineData("2a02:8108:4740:780c:594f:4602:8888:9999")]

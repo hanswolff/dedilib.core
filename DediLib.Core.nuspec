@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DediLib2.Core</id>
-    <version>$version$</version>
+    <version>0.14.0</version>
     <authors>Hans Wolff</authors>
     <owners>Hans Wolff</owners>
     <licenseUrl>https://raw.githubusercontent.com/hanswolff/dedilib.core/master/LICENSE</licenseUrl>
@@ -15,21 +15,12 @@
     <tags></tags>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
-        <dependency id="System.Console" version="4.3.0" />
-        <dependency id="System.Collections.Concurrent" version="4.3.0" />
-        <dependency id="System.Globalization" version="4.3.0" />
-        <dependency id="System.IO" version="4.3.0" />
-        <dependency id="System.IO.FileSystem" version="4.3.0" />
-        <dependency id="System.Linq" version="4.3.0" />
-        <dependency id="System.Net.Primitives" version="4.3.0" />
-        <dependency id="System.Reflection" version="4.3.0" />
-        <dependency id="System.Threading.Tasks" version="4.3.0" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="build\*.deps.json" target="lib/netstandard2.0" />
-    <file src="build\*.dll" target="lib/netstandard2.0" />
-    <file src="build\*.pdb" target="lib/netstandard2.0" />
+    <file src="build\*.deps.json" target="lib\netstandard2.0" />
+    <file src="build\*.dll" target="lib\netstandard2.0" />
+    <file src="build\*.pdb" target="lib\netstandard2.0" />
   </files>  
 </package>

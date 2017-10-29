@@ -12,6 +12,7 @@ namespace Test.DediLib.IO
             Assert.Equal("abc_", fileNameCleaner.ReplaceInvalidPathChars("abc|", "_"));
         }
 
+        [Theory]
         [InlineData(null, null)]
         [InlineData("", "")]
         [InlineData("abc", "abc")]
@@ -33,6 +34,7 @@ namespace Test.DediLib.IO
             Assert.Equal("abc_", fileNameCleaner.ReplaceInvalidFileChars("abc*", "_"));
         }
 
+        [Theory]
         [InlineData(null, null)]
         [InlineData("", "")]
         [InlineData("abc", "abc")]
@@ -54,6 +56,7 @@ namespace Test.DediLib.IO
             Assert.Equal("abc_", fileNameCleaner.ReplaceAllInvalidChars("abc*", "_"));
         }
 
+        [Theory]
         [InlineData(null, null)]
         [InlineData("", "")]
         [InlineData("abc", "abc")]

@@ -27,6 +27,7 @@ namespace Test.DediLib.Configuration
             Assert.Throws<ArgumentException>(() => builder.With("name", "value with illegal chars \r\n"));
         }
 
+        [Theory]
         [InlineData("1+1=2")]
         [InlineData(" precedingspace")]
         [InlineData("spaceattheend ")]
@@ -88,6 +89,7 @@ namespace Test.DediLib.Configuration
             Assert.Equal("name1=value1;name2=value2", builder.Build());
         }
 
+        [Theory]
         [InlineData("name1", "name1")]
         [InlineData("name1;", "name1")]
         [InlineData("name1;;", "name1")]

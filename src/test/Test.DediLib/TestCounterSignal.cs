@@ -17,49 +17,49 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void initial_value_greater_equal_one_IsSet_false()
+        public void Initial_value_greater_equal_one_IsSet_false()
         {
             var counterSignal = new CounterSignal(1);
             Assert.False(counterSignal.IsSet);
         }
 
         [Fact]
-        public void initial_value_greater_equal_one_initial_value_one_IsSet_false()
+        public void Initial_value_greater_equal_one_initial_value_one_IsSet_false()
         {
             var counterSignal = new CounterSignal(1, 1);
             Assert.True(counterSignal.IsSet);
         }
 
         [Fact]
-        public void initial_value_signal_IsSet_true()
+        public void Initial_value_signal_IsSet_true()
         {
             var counterSignal = new CounterSignal(1, 1);
             Assert.True(counterSignal.IsSet);
         }
 
         [Fact]
-        public void initial_value_signal_set_Wait()
+        public void Initial_value_signal_set_Wait()
         {
             var counterSignal = new CounterSignal(1, 1);
             Assert.True(counterSignal.Wait(TimeSpan.Zero));
         }
 
         [Fact]
-        public void initial_value_signal_set_Wait_TimeSpan()
+        public void Initial_value_signal_set_Wait_TimeSpan()
         {
             var counterSignal = new CounterSignal(1, 1);
             Assert.True(counterSignal.Wait(TimeSpan.Zero));
         }
 
         [Fact]
-        public void initial_value_signal_not_set_IsSet_false()
+        public void Initial_value_signal_not_set_IsSet_false()
         {
             var counterSignal = new CounterSignal(2, 1);
             Assert.False(counterSignal.IsSet);
         }
 
         [Fact]
-        public void initial_value_signal_not_set_Wait_CancellationToken()
+        public void Initial_value_signal_not_set_Wait_CancellationToken()
         {
             var counterSignal = new CounterSignal(2, 1);
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMilliseconds(15)).Token;
@@ -67,7 +67,7 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void initial_value_signal_not_set_Wait_TimeSpan_CancellationToken_timed_out()
+        public void Initial_value_signal_not_set_Wait_TimeSpan_CancellationToken_timed_out()
         {
             var counterSignal = new CounterSignal(2, 1);
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromSeconds(1)).Token;
@@ -75,7 +75,7 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void initial_value_signal_not_set_Wait_TimeSpan_CancellationToken_cancelled()
+        public void Initial_value_signal_not_set_Wait_TimeSpan_CancellationToken_cancelled()
         {
             var counterSignal = new CounterSignal(2, 1);
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMilliseconds(15)).Token;
@@ -83,14 +83,14 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void initial_value_signal_not_set_Wait_TimeSpan_false()
+        public void Initial_value_signal_not_set_Wait_TimeSpan_false()
         {
             var counterSignal = new CounterSignal(2, 1);
             Assert.False(counterSignal.Wait(TimeSpan.Zero));
         }
 
         [Fact]
-        public void counter_increment_signal_IsSet_true()
+        public void Counter_increment_signal_IsSet_true()
         {
             var counterSignal = new CounterSignal(2, 1);
             counterSignal.Increment();
@@ -98,7 +98,7 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void counter_add_signal_IsSet_true()
+        public void Counter_add_signal_IsSet_true()
         {
             var counterSignal = new CounterSignal(10, 1);
             counterSignal.Add(100);
@@ -107,7 +107,7 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void counter_add_signal_IsSet_false()
+        public void Counter_add_signal_IsSet_false()
         {
             var counterSignal = new CounterSignal(10, 0);
             counterSignal.Add(9);
@@ -115,7 +115,7 @@ namespace Test.DediLib
         }
 
         [Fact]
-        public void counter_increment_then_decrement_signal_IsSet_false()
+        public void Counter_increment_then_decrement_signal_IsSet_false()
         {
             var counterSignal = new CounterSignal(2, 1);
             counterSignal.Increment();
@@ -123,6 +123,7 @@ namespace Test.DediLib
             Assert.False(counterSignal.IsSet);
         }
 
+        [Theory]
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
@@ -157,7 +158,7 @@ namespace Test.DediLib
 
         [Trait("Category", "Benchmark")]
         [Fact]
-        public void benchmark_get_value()
+        public void Benchmark_get_value()
         {
             var counterSignal = new CounterSignal(1, 0);
 
@@ -178,7 +179,7 @@ namespace Test.DediLib
 
         [Trait("Category", "Benchmark")]
         [Fact]
-        public void benchmark_increment_value()
+        public void Benchmark_increment_value()
         {
             var counterSignal = new CounterSignal(1, 0);
 
@@ -195,7 +196,7 @@ namespace Test.DediLib
 
         [Trait("Category", "Benchmark")]
         [Fact]
-        public void benchmark_add_value()
+        public void Benchmark_add_value()
         {
             var counterSignal = new CounterSignal(1, 0);
 
